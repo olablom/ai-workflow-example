@@ -5,7 +5,7 @@ One file for current project state. Keep this updated; other workflow files refe
 ---
 
 PROJECT
-<project name>
+AI Workflow Example
 
 MILESTONE
 <current milestone>

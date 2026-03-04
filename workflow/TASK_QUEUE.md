@@ -1,7 +1,7 @@
 # TASK QUEUE
 
 ACTIVE
-- <active task>
+- Initialize project
 
 NEXT
 - <next task>
