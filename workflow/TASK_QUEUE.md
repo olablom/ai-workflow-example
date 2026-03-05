@@ -1,10 +1,9 @@
 # TASK QUEUE
 
 ACTIVE
-- <active task>
 
 NEXT
-- <next task>
 
 DONE
 - initialize workflow template
+- add minimal 30-second workflow demo to README

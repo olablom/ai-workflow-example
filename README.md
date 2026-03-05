@@ -16,6 +16,15 @@ This workflow provides a lightweight structure to maintain stable reasoning and 
 
 To start a new ChatGPT session with full context, follow **workflow/NEW_CHAT_PROMPT.md** (paste the listed files in order, then your message).
 
+### 30-second demo
+
+Run the example script and check the placeholder artifact:
+
+```bash
+python src/hello_example.py
+cat artifacts/run_log.txt
+```
+
 ## Quick start for new projects
 
 After creating a new repository from this template:

@@ -5,10 +5,10 @@ One file for current project state. Keep this updated; other workflow files refe
 ---
 
 PROJECT
-<project name>
+AI Workflow Example
 
 MILESTONE
-<current milestone>
+Sync example repo with template v1.3.0
 
 ARCHITECTURE
 planner → implementer → reviewer → memory
@@ -28,14 +28,14 @@ iteration drift
 architecture drift
 
 CURRENT TASK
-<active task>
+Add next example improvement
 
 STABLE_REF
 dd28deb10232964992172a5e5749c69098bada49
-Last known-good baseline commit. For rollback: git checkout <STABLE_REF> (or create a branch from it).
+Last known-good baseline commit. For rollback: git checkout STABLE_REF (or create a branch from it).
 
 SESSION OBJECTIVE
-<desired outcome>
+Route should return plan or commit instead of resume
 
 ---
 

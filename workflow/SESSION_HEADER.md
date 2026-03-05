@@ -9,7 +9,7 @@ Respect invariants.
 
 STATE
 
-P: <project>
+P: AI Workflow Example
 A: planner → implementer → reviewer → memory
 S: anchor stable, delta active
 D: see DECISIONS_LOG
