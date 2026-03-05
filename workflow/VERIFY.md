@@ -2,24 +2,23 @@
 
 Checklist before committing changes:
 
-## Evidence logging (required)
-- Reviewer must append exactly one entry to workflow/EVIDENCE.jsonl per reviewer run.
-- The entry must include: ts, repo, run_id, step="reviewer", commands[], and git{}.
-- git{} must include: branch, head, dirty, diff_stat.
-- Each commands[] item must include: cmd, exit_code. (stdout_tail optional.)
-- If any command exit_code != 0: do not commit; next step must be debug/fix.
-- If evidence is missing: do not commit.
-
-Evidence entry example:
-
-```
-{"ts":"<iso8601>","repo":"ai-workflow-example","run_id":"<run_id>","step":"reviewer","git":{"branch":"<branch>","head":"<commit>","dirty":<bool>,"diff_stat":"<diff --stat>"},"commands":[{"cmd":"<command>","exit_code":0}]}
-```
-
 ## State verification
 - STATE.md reflects the current milestone and task
 - TASK_QUEUE.md reflects what is actually being worked on
 - DECISIONS_LOG.md updated if architectural decisions were made
+
+## Evidence logging (required)
+* Reviewer evidence uses **staged** diff only (git diff --cached). git.diff_stat must come from "git diff --cached --stat". When git.dirty=true, require git.diff_sha256 (sha256 of "git diff --cached").
+* Append one evidence entry to workflow/EVIDENCE.jsonl per reviewer run.
+* Do not commit if the latest evidence entry has any non-zero exit_code or if evidence was not appended.
+
+Evidence example (include diff_sha256 when dirty): "diff_sha256":"<sha256>"
+
+How to compute diff_sha256 (Git Bash):
+  git diff --cached --stat
+  git diff --cached | sha256sum
+  git diff --cached | shasum -a 256
+ (shasum if sha256sum not available)
 
 1. Run:
    git status
