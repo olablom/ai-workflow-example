@@ -28,7 +28,7 @@ iteration drift
 architecture drift
 
 CURRENT TASK
-Choose next example improvement
+Queue next example improvement
 
 STABLE_REF
 dd28deb10232964992172a5e5749c69098bada49

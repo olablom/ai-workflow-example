@@ -14,7 +14,7 @@ def main():
     if args.log:
         log_path = "artifacts/run_log.txt"
         with open(log_path, "a") as f:
-            f.write(f"Run: {ts}\n")
+            f.write("Run logged\n")
 
 
 if __name__ == "__main__":
